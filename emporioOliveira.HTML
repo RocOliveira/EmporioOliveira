@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Empório Oliveira</title>
+  <link rel="stylesheet" href="emporioOliveira.css" />
+</head>
+
+<body>
+
+<header class="hero-header">
+  <div class="hero-texto">
+    <h1>Empório Oliveira</h1>
+    <p>Produtos naturais direto dos agricultores da região</p>
+  </div>
+</header>
+
+  <nav id="navegacao">
+    <button class="tab-btn" onclick="openTab('home')">Home</button>
+    <button class="tab-btn" onclick="openTab('sobre')">Sobre</button>
+    <button class="tab-btn" onclick="openTab('cadastro')">Cadastro</button>
+  </nav>
+
+    <main>
+
+        <section id="home" class="tab-content active">
+            <h2>Bem-vindo!</h2>
+            <p class="descricao-home">
+                O <strong>Empório Oliveira</strong> é um espaço dedicado à alimentação saudável, sustentável e regional.
+                Trabalhamos com produtos naturais, frescos e sem aditivos, fornecidos diretamente por agricultores da nossa comunidade.
+            </p>
+            <p class="descricao-home">
+                Aqui, você encontra qualidade, confiança e o sabor verdadeiro da terra.
+            </p>
+
+            </div>
+
+            <hr> <div class="home-produtos">
+                <h2>Nossos Produtos Frescos</h2>
+                <section id="produtos" class="produtos">
+                <div class="galeria">
+
+                    <div class="produto" data-preco="25.00">
+                    <img src="imagens.img/Mel.jpg" alt="Pote de mel orgânico dourado" />
+                    <p class="preco">R$ 25,00</p>
+
+                    <div class="quantidade-controle">
+                        <button onclick="alterarQuantidade(this, -1)">−</button>
+                        <span class="quantidade">0</span>
+                        <button onclick="alterarQuantidade(this, 1)">+</button>
+                    </div>
+
+                    </div>
+
+        
+
+                    <div class="produto" data-preco="15.00">
+                    <img src="imagens.img/frutas.jpg" alt="Cesta de frutas frescas variadas" />
+                    <p class="preco">R$ 55,00</p>
+
+                    <div class="quantidade-controle">
+                        <button onclick="alterarQuantidade(this, -1)">−</button>
+                        <span class="quantidade">0</span>
+                        <button onclick="alterarQuantidade(this, 1)">+</button>
+                    </div>
+
+                    </div>
+        
+                    <div class="produto" data-preco="10.00">
+                    <img src="imagens.img/Graos.jpg" alt="Grãos naturais diversos" />
+                    <p class="preco">R$ 10,00</p>
+
+                    <div class="quantidade-controle">
+                        <button onclick="alterarQuantidade(this, -1)">−</button>
+                        <span class="quantidade">0</span>
+                        <button onclick="alterarQuantidade(this, 1)">+</button>
+                    </div>
+
+                    </div>
+
+                </div>
+                <div id="totalCompra" style="margin-top: 30px; font-weight: bold; font-size: 1.2rem;">
+                    Total: R$ 0,00
+                </div>
+                </section>
+            </div>
+            </section>
+
+        
+
+            <section id="sobre" class="tab-content sobre">
+            <h2>Sobre Nós</h2>
+            <p>Há mais de quarenta anos, nascia o que hoje conhecemos como Empório Oliveira.</p>
+            <p>Tudo começou de forma simples, com uma pequena banca montada na frente da casa da família Oliveira, onde os avós vendiam frutas, ovos e hortaliças colhidas no
+                próprio sítio.</p>
+            <p>Ao longo dos anos, a dedicação da família em oferecer alimentos frescos, naturais e de confiança conquistou a comunidade local.
+                O que era uma venda modesta se transformou em um ponto de referência para quem busca qualidade e sabor de verdade.
+                Com o passar das gerações, os filhos e netos mantiveram viva a essência do negócio: respeitar a terra, valorizar o pequeno produtor e atender cada
+                cliente com o mesmo carinho de sempre.</p>
+            <p>Hoje, o Empório Oliveira é uma empresa familiar consolidada, que cresceu com raízes firmes e coração aberto.
+                Seguimos orgulhosamente fornecendo produtos naturais diretamente de agricultores da região, com o compromisso de sempre melhorar,
+                expandir e cultivar não apenas alimentos, mas também confiança, saúde e relações duradouras com nossos clientes.</p>
+            </section>
+
+        
+
+            <section id="cadastro" class="tab-content">
+
+            <h2>Cadastro</h2>
+            <form id="cadastroForm">
+
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required />
+
+                <label for="cpf">CPF:</label>
+                <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" required />
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="exemplo@emporioOliveira.com"  required />
+
+                <label for="telefone">Telefone:</label>
+                <input type="text" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX"  required />
+
+                <label for="cep">CEP:</label>
+                <input type="text" id="cep" name="cep" placeholder="00000-000" required />
+
+                <label for="logradouro">Endereço (Rua, nº):</label>
+                <input type="text" id="logradouro" name="logradouro" placeholder="Digite seu endereço completo"required />
+
+                <label for="cidade">Cidade:</label>
+                <input type="text" id="cidade" name="cidade" readonly required />
+
+                <label for="estado">Estado:</label>
+                <input type="text" id="estado" name="estado" readonly required />
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem"  placeholder="Escreva sua mensagem aqui..."></textarea>
+
+                <button type="submit">Enviar</button>
+
+            </form>
+        </section>
+
+    </main>
+ 
+  <footer>
+  <p>&copy; 2025 Empório Oliveira. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="emporioOliveira.js"></script>
+
+</body>
+</html>
